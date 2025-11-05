@@ -1,0 +1,141 @@
+{
+  "invoices": [
+    {
+      "serialNumber": "INV-148CZS",
+      "invoiceDate": "12 Nov 2024",
+      "customerName": "Shounak",
+      "productName": "GEMS CHOCLATE POUCH",
+      "quantity": "1000.000",
+      "taxPercent": "5%",
+      "priceWithTax": "5000.00",
+      "totalAmount": "205481.00",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+919999999999"
+    },
+    {
+      "serialNumber": "INV-148CZS",
+      "invoiceDate": "12 Nov 2024",
+      "customerName": "Shounak",
+      "productName": "TREAT BKS CASE 80PKT",
+      "quantity": "50.000",
+      "taxPercent": "12%",
+      "priceWithTax": "30000.00",
+      "totalAmount": "205481.00",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+919999999999"
+    },
+    {
+      "serialNumber": "INV-148CZS",
+      "invoiceDate": "12 Nov 2024",
+      "customerName": "Shounak",
+      "productName": "NUTRI CHOICE BKS CASE",
+      "quantity": "25.000",
+      "taxPercent": "5%",
+      "priceWithTax": "17500.00",
+      "totalAmount": "205481.00",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+919999999999"
+    },
+    {
+      "serialNumber": "INV-148CZS",
+      "invoiceDate": "12 Nov 2024",
+      "customerName": "Shounak",
+      "productName": "MILK BIKIS CLASSIC CASE 120PK",
+      "quantity": "20.000",
+      "taxPercent": "5%",
+      "priceWithTax": "17000.00",
+      "totalAmount": "205481.00",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+919999999999"
+    },
+    {
+      "serialNumber": "INV-TEST-1526",
+      "invoiceDate": "12 Nov 2024",
+      "customerName": "Navya Sri",
+      "productName": "YONEX ZR 100 LIGHT Racket",
+      "quantity": "7.000",
+      "taxPercent": "0%",
+      "priceWithTax": "179200.00",
+      "totalAmount": "368381.00",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+919999999999"
+    },
+    {
+      "serialNumber": "INV-TEST-1526",
+      "invoiceDate": "12 Nov 2024",
+      "customerName": "Navya Sri",
+      "productName": "Matrix and Pillows",
+      "quantity": "1.000",
+      "taxPercent": "18%",
+      "priceWithTax": "53200.00",
+      "totalAmount": "368381.00",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+919999999999"
+    }
+  ],
+  "products": [
+    {
+      "name": "GEMS CHOCLATE POUCH",
+      "quantity": "1000.000",
+      "unitPrice": "4.7619",
+      "taxPercent": "5%",
+      "priceWithTax": "5000.00",
+      "discount": null
+    },
+    {
+      "name": "TREAT BKS CASE 80PKT",
+      "quantity": "50.000",
+      "unitPrice": "535.7143",
+      "taxPercent": "12%",
+      "priceWithTax": "30000.00",
+      "discount": null
+    },
+    {
+      "name": "NUTRI CHOICE BKS CASE",
+      "quantity": "25.000",
+      "unitPrice": "666.6667",
+      "taxPercent": "5%",
+      "priceWithTax": "17500.00",
+      "discount": null
+    },
+    {
+      "name": "MILK BIKIS CLASSIC CASE 120PK",
+      "quantity": "20.000",
+      "unitPrice": "809.5238",
+      "taxPercent": "5%",
+      "priceWithTax": "17000.00",
+      "discount": null
+    },
+    {
+      "name": "YONEX ZR 100 LIGHT Racket",
+      "quantity": "7.000",
+      "unitPrice": "25600.00",
+      "taxPercent": "0%",
+      "priceWithTax": "179200.00",
+      "discount": null
+    },
+    {
+      "name": "Matrix and Pillows",
+      "quantity": "1.000",
+      "unitPrice": "45084.7458",
+      "taxPercent": "18%",
+      "priceWithTax": "53200.00",
+      "discount": null
+    }
+  ],
+  "customers": [
+    {
+      "customerName": "Shounak",
+      "phoneNumber": "9999999994",
+      "companyName": "NextSpeed Technologies Pvt Ltd",
+      "totalPurchaseAmount": "205481.00"
+    },
+    {
+      "customerName": "Navya Sri",
+      "phoneNumber": "8965236147",
+      "companyName": null,
+      "totalPurchaseAmount": "368381.00"
+    }
+  ],
+  "missing_fields": ["status"]
+}

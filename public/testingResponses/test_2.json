@@ -1,0 +1,723 @@
+{
+  "invoices": [
+    {
+      "serialNumber": "INV-149CZS",
+      "invoiceDate": "12 Nov 2024",
+      "customerName": "Vardharajulu",
+      "productName": "Matrix and Pillows",
+      "quantity": "2.000",
+      "taxPercent": "18.0",
+      "priceWithTax": "106400.00",
+      "totalAmount": "106400.00",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "gertgerg rfreferf",
+      "quantity": "1.000",
+      "taxPercent": "0.0",
+      "priceWithTax": "0.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "INDIE MIX POHA 500GM",
+      "quantity": "1.000",
+      "taxPercent": "5.0",
+      "priceWithTax": "37.50",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "Oxygen",
+      "quantity": "1.000",
+      "taxPercent": "18.0",
+      "priceWithTax": "499.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "New backde",
+      "quantity": "1.000",
+      "taxPercent": "0.0",
+      "priceWithTax": "1000.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "FESTIVE DRESS - FROCK",
+      "quantity": "1.000",
+      "taxPercent": "0.0",
+      "priceWithTax": "1000.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "78doleo",
+      "quantity": "8.000",
+      "taxPercent": "6.0",
+      "priceWithTax": "320.01",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "BOM TEST",
+      "quantity": "1.000",
+      "taxPercent": "0.0",
+      "priceWithTax": "0.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "Barcode testing 2",
+      "quantity": "1.000",
+      "taxPercent": "0.0",
+      "priceWithTax": "0.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "Barcode test product",
+      "quantity": "1.000",
+      "taxPercent": "0.0",
+      "priceWithTax": "0.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "images 2",
+      "quantity": "1.000",
+      "taxPercent": "0.0",
+      "priceWithTax": "0.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "Redmi phone",
+      "quantity": "1.000",
+      "taxPercent": "0.0",
+      "priceWithTax": "6000.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "Redmi phone",
+      "quantity": "1.000",
+      "taxPercent": "0.0",
+      "priceWithTax": "6000.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "copy pr",
+      "quantity": "1.000",
+      "taxPercent": "18.0",
+      "priceWithTax": "71.98",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "copy batch",
+      "quantity": "4.000",
+      "taxPercent": "18.0",
+      "priceWithTax": "472.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "raw material B",
+      "quantity": "1.000",
+      "taxPercent": "0.0",
+      "priceWithTax": "0.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "Door987",
+      "quantity": "1.000",
+      "taxPercent": "0.0",
+      "priceWithTax": "0.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "Car987",
+      "quantity": "1.000",
+      "taxPercent": "18.0",
+      "priceWithTax": "82600.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "Test new",
+      "quantity": "1.000",
+      "taxPercent": "18.0",
+      "priceWithTax": "700.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "Automotive Inverter and Battery Survey",
+      "quantity": "1.000",
+      "taxPercent": "18.0",
+      "priceWithTax": "514686.50",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "Mumbai Real Estate Quant Survey",
+      "quantity": "1.000",
+      "taxPercent": "18.0",
+      "priceWithTax": "177000.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "Fleetowners_Dealers",
+      "quantity": "1.000",
+      "taxPercent": "18.0",
+      "priceWithTax": "94400.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "Syntimental Analysis_Fashion brands",
+      "quantity": "1.000",
+      "taxPercent": "18.0",
+      "priceWithTax": "80830.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "Aswagandha",
+      "quantity": "1.000",
+      "taxPercent": "18.0",
+      "priceWithTax": "17936.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "sentimental analysis__Fashion brand",
+      "quantity": "1.000",
+      "taxPercent": "18.0",
+      "priceWithTax": "47790.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "Sentimental analysis_On medicine",
+      "quantity": "1.000",
+      "taxPercent": "18.0",
+      "priceWithTax": "95580.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "UPI_Quanitiative_Survey -Consumers",
+      "quantity": "1.000",
+      "taxPercent": "18.0",
+      "priceWithTax": "356360.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "TVSC dealers and consumers- Consumer",
+      "quantity": "1.000",
+      "taxPercent": "18.0",
+      "priceWithTax": "1442550.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "Making charges",
+      "quantity": "1",
+      "taxPercent": "0.0",
+      "priceWithTax": "123456.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "debit card charges",
+      "quantity": "1",
+      "taxPercent": "0.0",
+      "priceWithTax": "12345.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "Shipping Charges",
+      "quantity": "1",
+      "taxPercent": "0.0",
+      "priceWithTax": "60.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "Shipping Charges",
+      "quantity": "1",
+      "taxPercent": "0.0",
+      "priceWithTax": "60.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "INV-54CZS",
+      "invoiceDate": "04 Nov 2024",
+      "customerName": "Test Assam",
+      "productName": "Shipping Charges",
+      "quantity": "1",
+      "taxPercent": "0.0",
+      "priceWithTax": "60.00",
+      "totalAmount": "3061814.98",
+      "companyName": "Elnvoices",
+      "phoneNumber": "+91 9999999999"
+    },
+    {
+      "serialNumber": "RAY/23-24/286",
+      "invoiceDate": "12 Nov 2024",
+      "customerName": "Shounak",
+      "productName": "1PHONE 16",
+      "quantity": "1.0",
+      "taxPercent": "18.0",
+      "priceWithTax": "81636.35",
+      "totalAmount": "94782.67",
+      "companyName": "Shubham Jewellery",
+      "phoneNumber": "3562472477"
+    },
+    {
+      "serialNumber": "RAY/23-24/286",
+      "invoiceDate": "12 Nov 2024",
+      "customerName": "Shounak",
+      "productName": "1PHONE 16 Cover",
+      "quantity": "1.0",
+      "taxPercent": "18.0",
+      "priceWithTax": "4693.66",
+      "totalAmount": "94782.67",
+      "companyName": "Shubham Jewellery",
+      "phoneNumber": "3562472477"
+    },
+    {
+      "serialNumber": "RAY/23-24/286",
+      "invoiceDate": "12 Nov 2024",
+      "customerName": "Shounak",
+      "productName": "Beats PRO X",
+      "quantity": "1.0",
+      "taxPercent": "18.0",
+      "priceWithTax": "25513.54",
+      "totalAmount": "94782.67",
+      "companyName": "Shubham Jewellery",
+      "phoneNumber": "3562472477"
+    }
+  ],
+  "products": [
+    {
+      "name": "Matrix and Pillows",
+      "quantity": "2.000",
+      "unitPrice": "45084.7458",
+      "taxPercent": "18.0",
+      "priceWithTax": "53200.00",
+      "discount": null
+    },
+    {
+      "name": "gertgerg rfreferf",
+      "quantity": "1.000",
+      "unitPrice": "0.00",
+      "taxPercent": "0.0",
+      "priceWithTax": "0.00",
+      "discount": null
+    },
+    {
+      "name": "INDIE MIX POHA 500GM",
+      "quantity": "1.000",
+      "unitPrice": "35.7143",
+      "taxPercent": "5.0",
+      "priceWithTax": "37.50",
+      "discount": null
+    },
+    {
+      "name": "Oxygen",
+      "quantity": "1.000",
+      "unitPrice": "423.7288",
+      "taxPercent": "18.0",
+      "priceWithTax": "499.00",
+      "discount": null
+    },
+    {
+      "name": "New backde",
+      "quantity": "1.000",
+      "unitPrice": "1000.00",
+      "taxPercent": "0.0",
+      "priceWithTax": "1000.00",
+      "discount": null
+    },
+    {
+      "name": "FESTIVE DRESS - FROCK",
+      "quantity": "1.000",
+      "unitPrice": "1000.00",
+      "taxPercent": "0.0",
+      "priceWithTax": "1000.00",
+      "discount": null
+    },
+    {
+      "name": "78doleo",
+      "quantity": "8.000",
+      "unitPrice": "37.7358",
+      "taxPercent": "6.0",
+      "priceWithTax": "40.00",
+      "discount": null
+    },
+    {
+      "name": "BOM TEST",
+      "quantity": "1.000",
+      "unitPrice": "0.00",
+      "taxPercent": "0.0",
+      "priceWithTax": "0.00",
+      "discount": null
+    },
+    {
+      "name": "Barcode testing 2",
+      "quantity": "1.000",
+      "unitPrice": "0.00",
+      "taxPercent": "0.0",
+      "priceWithTax": "0.00",
+      "discount": null
+    },
+    {
+      "name": "Barcode test product",
+      "quantity": "1.000",
+      "unitPrice": "0.00",
+      "taxPercent": "0.0",
+      "priceWithTax": "0.00",
+      "discount": null
+    },
+    {
+      "name": "images 2",
+      "quantity": "1.000",
+      "unitPrice": "0.00",
+      "taxPercent": "0.0",
+      "priceWithTax": "0.00",
+      "discount": null
+    },
+    {
+      "name": "Redmi phone",
+      "quantity": "2.000",
+      "unitPrice": "6000.00",
+      "taxPercent": "0.0",
+      "priceWithTax": "6000.00",
+      "discount": null
+    },
+    {
+      "name": "copy pr",
+      "quantity": "1.000",
+      "unitPrice": "61.00",
+      "taxPercent": "18.0",
+      "priceWithTax": "71.98",
+      "discount": null
+    },
+    {
+      "name": "copy batch",
+      "quantity": "4.000",
+      "unitPrice": "100.00",
+      "taxPercent": "18.0",
+      "priceWithTax": "118.00",
+      "discount": null
+    },
+    {
+      "name": "raw material B",
+      "quantity": "1.000",
+      "unitPrice": "0.00",
+      "taxPercent": "0.0",
+      "priceWithTax": "0.00",
+      "discount": null
+    },
+    {
+      "name": "Door987",
+      "quantity": "1.000",
+      "unitPrice": "0.00",
+      "taxPercent": "0.0",
+      "priceWithTax": "0.00",
+      "discount": null
+    },
+    {
+      "name": "Car987",
+      "quantity": "1.000",
+      "unitPrice": "70000.00",
+      "taxPercent": "18.0",
+      "priceWithTax": "82600.00",
+      "discount": null
+    },
+    {
+      "name": "Test new",
+      "quantity": "1.000",
+      "unitPrice": "593.2203",
+      "taxPercent": "18.0",
+      "priceWithTax": "700.00",
+      "discount": null
+    },
+    {
+      "name": "Automotive Inverter and Battery Survey",
+      "quantity": "1.000",
+      "unitPrice": "436175.00",
+      "taxPercent": "18.0",
+      "priceWithTax": "514686.50",
+      "discount": null
+    },
+    {
+      "name": "Mumbai Real Estate Quant Survey",
+      "quantity": "1.000",
+      "unitPrice": "150000.00",
+      "taxPercent": "18.0",
+      "priceWithTax": "177000.00",
+      "discount": null
+    },
+    {
+      "name": "Fleetowners_Dealers",
+      "quantity": "1.000",
+      "unitPrice": "80000.00",
+      "taxPercent": "18.0",
+      "priceWithTax": "94400.00",
+      "discount": null
+    },
+    {
+      "name": "Syntimental Analysis_Fashion brands",
+      "quantity": "1.000",
+      "unitPrice": "68500.00",
+      "taxPercent": "18.0",
+      "priceWithTax": "80830.00",
+      "discount": null
+    },
+    {
+      "name": "Aswagandha",
+      "quantity": "1.000",
+      "unitPrice": "15200.00",
+      "taxPercent": "18.0",
+      "priceWithTax": "17936.00",
+      "discount": null
+    },
+    {
+      "name": "sentimental analysis__Fashion brand",
+      "quantity": "1.000",
+      "unitPrice": "40500.00",
+      "taxPercent": "18.0",
+      "priceWithTax": "47790.00",
+      "discount": null
+    },
+    {
+      "name": "Sentimental analysis_On medicine",
+      "quantity": "1.000",
+      "unitPrice": "81000.00",
+      "taxPercent": "18.0",
+      "priceWithTax": "95580.00",
+      "discount": null
+    },
+    {
+      "name": "UPI_Quanitiative_Survey -Consumers",
+      "quantity": "1.000",
+      "unitPrice": "302000.00",
+      "taxPercent": "18.0",
+      "priceWithTax": "356360.00",
+      "discount": null
+    },
+    {
+      "name": "TVSC dealers and consumers- Consumer",
+      "quantity": "1.000",
+      "unitPrice": "1222500.00",
+      "taxPercent": "18.0",
+      "priceWithTax": "1442550.00",
+      "discount": null
+    },
+    {
+      "name": "Making charges",
+      "quantity": "1",
+      "unitPrice": "123456.00",
+      "taxPercent": "0.0",
+      "priceWithTax": "123456.00",
+      "discount": null
+    },
+    {
+      "name": "debit card charges",
+      "quantity": "1",
+      "unitPrice": "12345.00",
+      "taxPercent": "0.0",
+      "priceWithTax": "12345.00",
+      "discount": null
+    },
+    {
+      "name": "Shipping Charges",
+      "quantity": "3",
+      "unitPrice": "60.00",
+      "taxPercent": "0.0",
+      "priceWithTax": "60.00",
+      "discount": null
+    },
+    {
+      "name": "1PHONE 16",
+      "quantity": "1.0",
+      "unitPrice": "79990.00",
+      "taxPercent": "18.0",
+      "priceWithTax": "94388.20",
+      "discount": "5599.30"
+    },
+    {
+      "name": "1PHONE 16 Cover",
+      "quantity": "1.0",
+      "unitPrice": "4599.00",
+      "taxPercent": "18.0",
+      "priceWithTax": "5426.82",
+      "discount": "321.93"
+    },
+    {
+      "name": "Beats PRO X",
+      "quantity": "1.0",
+      "unitPrice": "24999.00",
+      "taxPercent": "18.0",
+      "priceWithTax": "29498.82",
+      "discount": "1749.93"
+    }
+  ],
+  "customers": [
+    {
+      "customerName": "Vardharajulu",
+      "phoneNumber": "96856321400",
+      "companyName": null,
+      "totalPurchaseAmount": "106400.00"
+    },
+    {
+      "customerName": "Test Assam",
+      "phoneNumber": null,
+      "companyName": null,
+      "totalPurchaseAmount": "3061814.98"
+    },
+    {
+      "customerName": "Shounak",
+      "phoneNumber": null,
+      "companyName": null,
+      "totalPurchaseAmount": "94782.67"
+    }
+  ],
+  "missing_fields": []
+}

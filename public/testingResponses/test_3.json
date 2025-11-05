@@ -1,0 +1,282 @@
+{
+  "invoices": [
+    {
+      "serialNumber": "RAY/23-24/286",
+      "invoiceDate": "12 Nov 2024",
+      "customerName": "Shounak",
+      "productName": "iPHONE 16",
+      "quantity": 1,
+      "taxPercent": 18,
+      "priceWithTax": 69183.35,
+      "totalAmount": 94782.67,
+      "companyName": "NextSpeed Technologies Pvt Ltd",
+      "phoneNumber": "999999999"
+    },
+    {
+      "serialNumber": "RAY/23-24/286",
+      "invoiceDate": "12 Nov 2024",
+      "customerName": "Shounak",
+      "productName": "iPHONE 16 Cover",
+      "quantity": 1,
+      "taxPercent": 18,
+      "priceWithTax": 3977.68,
+      "totalAmount": 94782.67,
+      "companyName": "NextSpeed Technologies Pvt Ltd",
+      "phoneNumber": "999999999"
+    },
+    {
+      "serialNumber": "RAY/23-24/286",
+      "invoiceDate": "12 Nov 2024",
+      "customerName": "Shounak",
+      "productName": "Beats PRO X",
+      "quantity": 1,
+      "taxPercent": 18,
+      "priceWithTax": 21621.64,
+      "totalAmount": 94782.67,
+      "companyName": "NextSpeed Technologies Pvt Ltd",
+      "phoneNumber": "999999999"
+    },
+    {
+      "serialNumber": "RAY/23-24/285",
+      "invoiceDate": "12 Nov 2024",
+      "customerName": "Abhinav",
+      "productName": "SPEAKER",
+      "quantity": 1,
+      "taxPercent": 0,
+      "priceWithTax": 10000,
+      "totalAmount": 10000,
+      "companyName": "GAME STATION",
+      "phoneNumber": "888888888"
+    },
+    {
+      "serialNumber": "RAY/23-24/284",
+      "invoiceDate": "08 Nov 2024",
+      "customerName": "Ramesh",
+      "productName": "12 MM PLAIN GLASS",
+      "quantity": 1,
+      "taxPercent": 0,
+      "priceWithTax": 88.98,
+      "totalAmount": 88.98,
+      "companyName": "Apple India",
+      "phoneNumber": "777777777"
+    },
+    {
+      "serialNumber": "RAY/23-24/283",
+      "invoiceDate": "08 Nov 2024",
+      "customerName": "Ramesh",
+      "productName": "12 MM PLAIN GLASS",
+      "quantity": 1,
+      "taxPercent": 0,
+      "priceWithTax": 88.98,
+      "totalAmount": 88.98,
+      "companyName": "Apple India",
+      "phoneNumber": "777777777"
+    },
+    {
+      "serialNumber": "RAY/23-24/282",
+      "invoiceDate": "07 Nov 2024",
+      "customerName": "RAM",
+      "productName": "12 MM PLAIN GLASS",
+      "quantity": 500,
+      "taxPercent": 0,
+      "priceWithTax": 37.08,
+      "totalAmount": 37.08,
+      "companyName": "Apple India",
+      "phoneNumber": "999999999"
+    },
+    {
+      "serialNumber": "RAY/23-24/281",
+      "invoiceDate": "07 Nov 2024",
+      "customerName": "RAM",
+      "productName": "12 MM PLAIN GLASS",
+      "quantity": 1,
+      "taxPercent": 0,
+      "priceWithTax": 88.98,
+      "totalAmount": 88.98,
+      "companyName": "Apple India",
+      "phoneNumber": "999999999"
+    },
+    {
+      "serialNumber": "RAY/23-24/280",
+      "invoiceDate": "06 Nov 2024",
+      "customerName": "Ramesh",
+      "productName": "12 MM PLAIN GLASS",
+      "quantity": 1,
+      "taxPercent": 18,
+      "priceWithTax": 105,
+      "totalAmount": 105,
+      "companyName": "Apple India",
+      "phoneNumber": "777777777"
+    },
+    {
+      "serialNumber": "RAY/23-24/280",
+      "invoiceDate": "06 Nov 2024",
+      "customerName": "Ramesh",
+      "productName": "plain glass",
+      "quantity": 1,
+      "taxPercent": 18,
+      "priceWithTax": 0,
+      "totalAmount": 105,
+      "companyName": "Apple India",
+      "phoneNumber": "777777777"
+    },
+    {
+      "serialNumber": "RAY/23-24/279",
+      "invoiceDate": "05 Nov 2024",
+      "customerName": "Abhinav",
+      "productName": "Ct Sheet",
+      "quantity": 3,
+      "taxPercent": 0,
+      "priceWithTax": 20,
+      "totalAmount": 20,
+      "companyName": "GAME STATION",
+      "phoneNumber": "888888888"
+    },
+    {
+      "serialNumber": "RAY/23-24/278",
+      "invoiceDate": "05 Nov 2024",
+      "customerName": "Decathlon",
+      "productName": "12 MM PLAIN GLASS",
+      "quantity": 1,
+      "taxPercent": 18,
+      "priceWithTax": 105,
+      "totalAmount": 105,
+      "companyName": "DECATHLON SPORTS INDIA PRIVATE LIMITED",
+      "phoneNumber": "555555555"
+    },
+    {
+      "serialNumber": "RAY/23-24/277",
+      "invoiceDate": "02 Nov 2024",
+      "customerName": "Abhinav",
+      "productName": "12 MM PLAIN GLASS",
+      "quantity": 15,
+      "taxPercent": 18,
+      "priceWithTax": 20475,
+      "totalAmount": 20475,
+      "companyName": "GAME STATION",
+      "phoneNumber": "888888888"
+    },
+    {
+      "serialNumber": "RAY/23-24/276",
+      "invoiceDate": "01 Nov 2024",
+      "customerName": "geeetha",
+      "productName": "plain glass",
+      "quantity": 1,
+      "taxPercent": 18,
+      "priceWithTax": 708,
+      "totalAmount": 708,
+      "companyName": "Flipkart Co",
+      "phoneNumber": "666666666"
+    },
+    {
+      "serialNumber": "RAY/23-24/275",
+      "invoiceDate": "01 Nov 2024",
+      "customerName": "geeetha",
+      "productName": "plain glass",
+      "quantity": 100,
+      "taxPercent": 18,
+      "priceWithTax": 55000,
+      "totalAmount": 55000,
+      "status": "paid",
+      "companyName": "Flipkart Co",
+      "phoneNumber": "666666666"
+    }
+  ],
+  "products": [
+    {
+      "name": "iPHONE 16",
+      "quantity": 1,
+      "unitPrice": 79990,
+      "taxPercent": 18,
+      "priceWithTax": 69183.35,
+      "discount": null
+    },
+    {
+      "name": "iPHONE 16 Cover",
+      "quantity": 1,
+      "unitPrice": 4599,
+      "taxPercent": 18,
+      "priceWithTax": 3977.68,
+      "discount": null
+    },
+    {
+      "name": "Beats PRO X",
+      "quantity": 1,
+      "unitPrice": 24999,
+      "taxPercent": 18,
+      "priceWithTax": 21621.64,
+      "discount": null
+    },
+    {
+      "name": "SPEAKER",
+      "quantity": 1,
+      "unitPrice": 10000,
+      "taxPercent": 0,
+      "priceWithTax": 10000,
+      "discount": null
+    },
+    {
+      "name": "12 MM PLAIN GLASS",
+      "quantity": 518,
+      "unitPrice": 105,
+      "taxPercent": 18,
+      "priceWithTax": 20894.04,
+      "discount": null
+    },
+    {
+      "name": "plain glass",
+      "quantity": 102,
+      "unitPrice": 708,
+      "taxPercent": 18,
+      "priceWithTax": 55708,
+      "discount": null
+    },
+    {
+      "name": "Ct Sheet",
+      "quantity": 3,
+      "unitPrice": 500,
+      "taxPercent": 0,
+      "priceWithTax": 20,
+      "discount": null
+    }
+  ],
+  "customers": [
+    {
+      "customerName": "Shounak",
+      "phoneNumber": "999999999",
+      "companyName": "NextSpeed Technologies Pvt Ltd",
+      "totalPurchaseAmount": 94782.67
+    },
+    {
+      "customerName": "Abhinav",
+      "phoneNumber": "888888888",
+      "companyName": "GAME STATION",
+      "totalPurchaseAmount": 30495
+    },
+    {
+      "customerName": "Ramesh",
+      "phoneNumber": "777777777",
+      "companyName": "Apple India",
+      "totalPurchaseAmount": 282.96
+    },
+    {
+      "customerName": "RAM",
+      "phoneNumber": "999999999",
+      "companyName": "Apple India",
+      "totalPurchaseAmount": 126.06
+    },
+    {
+      "customerName": "Decathlon",
+      "phoneNumber": "555555555",
+      "companyName": "DECATHLON SPORTS INDIA PRIVATE LIMITED",
+      "totalPurchaseAmount": 105
+    },
+    {
+      "customerName": "geeetha",
+      "phoneNumber": "666666666",
+      "companyName": "Flipkart Co",
+      "totalPurchaseAmount": 55708
+    }
+  ],
+  "missing_fields": ["discount"]
+}
