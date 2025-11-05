@@ -1,41 +1,15 @@
-'use client';
+"use client";
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
-import { FileUploader } from '@/components/upload/multi-file';
-import {
-  UploaderProvider,
-  type UploadFn,
-} from '@/components/upload/uploader-provider';
-import { useEdgeStore } from '@/lib/utils/edgestore';
-import * as React from 'react';
-
-export function MultiFileDropzoneUsage() {
-  const { edgestore } = useEdgeStore();
-
-  const uploadFn: UploadFn = React.useCallback(
-    async ({ file, onProgressChange, signal }) => {
-      const res = await edgestore.publicFiles.upload({
-        file,
-        signal,
-        onProgressChange,
-      });
-      // you can run some server action or api here
-      // to add the necessary data to your database
-      console.log(res);
-      return res;
-    },
-    [edgestore],
-  );
-
+const Page = () => {
+  const router = useRouter();
   return (
-    <UploaderProvider uploadFn={uploadFn} autoUpload>
-      <FileUploader
-        maxFiles={5}
-        maxSize={1024 * 1024 * 1} // 1 MB
-        accept={{
-          'application/pdf': [],
-          'text/plain': ['.txt'],
-        }}
-      />
-    </UploaderProvider>
+    <div>
+      Home Page
+      <Button onClick={() => router.push("/dashboard")}>Dashboard</Button>
+    </div>
   );
-}
+};
+
+export default Page;
