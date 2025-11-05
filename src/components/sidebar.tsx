@@ -18,7 +18,6 @@ export function Sidebar({ activeTab, onTabChange, onUploadClick }: SidebarProps)
 
   return (
     <aside className="w-64 bg-slate-900 border-r border-slate-800 h-screen flex flex-col">
-      {/* Header */}
       <div className="p-6 border-b border-slate-800">
         <div className="flex items-center gap-2">
           <UploadCloud className="w-6 h-6 text-blue-400" />
@@ -26,7 +25,6 @@ export function Sidebar({ activeTab, onTabChange, onUploadClick }: SidebarProps)
         </div>
       </div>
 
-      {/* Navigation */}
       <nav className="flex-1 p-4 space-y-2">
         {tabs.map(({ id, label, icon: Icon }) => (
           <button
@@ -41,8 +39,6 @@ export function Sidebar({ activeTab, onTabChange, onUploadClick }: SidebarProps)
           </button>
         ))}
       </nav>
-
-      {/* Upload Button */}
       <div className="p-4 border-t border-slate-800">
         <Button onClick={onUploadClick} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold gap-2">
           <UploadCloud className="w-4 h-4" />

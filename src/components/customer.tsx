@@ -7,6 +7,7 @@ import { updateCustomer, setCustomerErrors } from "@/redux/customerSlice";
 import { updateInvoice } from "@/redux/invoiceSlice";
 import { validateCustomer } from "@/lib/validation";
 import { AlertCircle } from "lucide-react";
+import { FieldErrorBadge } from "./field-error";
 
 interface CustomersTableProps {
   customers: Customer[];
@@ -22,12 +23,10 @@ export function CustomersTable({ customers, isLoading }: CustomersTableProps) {
     (customerIndex: number, field: string, value: string) => {
       const customer = { ...customers[customerIndex], [field]: value };
 
-      // Validate the updated customer
       const errors = validateCustomer(customer);
       dispatch(setCustomerErrors({ index: customerIndex, errors }));
       dispatch(updateCustomer({ index: customerIndex, customer }));
 
-      // If customer name changed, sync to invoices tab
       if (field === "customerName") {
         const invoiceIndices = invoices
           .map((inv, idx) =>
@@ -54,6 +53,14 @@ export function CustomersTable({ customers, isLoading }: CustomersTableProps) {
     },
     [customers, invoices, dispatch]
   );
+
+  const getFieldErrors = (customer: Customer, field: string): string[] => {
+    return (
+      customer.validationErrors
+        ?.filter((err) => err.field === field)
+        .map((err) => err.message) || []
+    );
+  };
 
   const hasErrors = (customer: Customer) => {
     return customer.validationErrors && customer.validationErrors.length > 0;
@@ -113,32 +120,76 @@ export function CustomersTable({ customers, isLoading }: CustomersTableProps) {
                 >
                   <td className="py-3 px-4">
                     {isEditing ? (
-                      <input
-                        value={cust.customerName}
-                        onChange={(e) =>
-                          handleFieldChange(idx, "customerName", e.target.value)
-                        }
-                        className="bg-slate-700 text-white px-2 py-1 rounded w-full text-xs"
-                        onClick={(e) => e.stopPropagation()}
-                      />
+                      <div className="space-y-1">
+                        <input
+                          value={cust.customerName}
+                          onChange={(e) =>
+                            handleFieldChange(
+                              idx,
+                              "customerName",
+                              e.target.value
+                            )
+                          }
+                          className={`bg-slate-700 text-white px-2 py-1 rounded w-full text-xs border ${
+                            getFieldErrors(cust, "customerName").length > 0
+                              ? "border-red-500 bg-red-900/20"
+                              : "border-slate-600"
+                          }`}
+                          onClick={(e) => e.stopPropagation()}
+                          placeholder="Customer name"
+                        />
+                        <FieldErrorBadge
+                          errors={getFieldErrors(cust, "customerName")}
+                          label={getFieldErrors(cust, "customerName")[0] || ""}
+                        />
+                      </div>
                     ) : (
-                      <span className="text-slate-200">
-                        {cust.customerName}
+                      <span
+                        className={`text-slate-200 ${
+                          !cust.customerName?.trim()
+                            ? "text-red-400 font-semibold"
+                            : ""
+                        }`}
+                      >
+                        {cust.customerName || "Missing"}
                       </span>
                     )}
                   </td>
                   <td className="py-3 px-4">
                     {isEditing ? (
-                      <input
-                        value={cust.phoneNumber}
-                        onChange={(e) =>
-                          handleFieldChange(idx, "phoneNumber", e.target.value)
-                        }
-                        className="bg-slate-700 text-white px-2 py-1 rounded w-full text-xs"
-                        onClick={(e) => e.stopPropagation()}
-                      />
+                      <div className="space-y-1">
+                        <input
+                          value={cust.phoneNumber}
+                          onChange={(e) =>
+                            handleFieldChange(
+                              idx,
+                              "phoneNumber",
+                              e.target.value
+                            )
+                          }
+                          className={`bg-slate-700 text-white px-2 py-1 rounded w-full text-xs border ${
+                            getFieldErrors(cust, "phoneNumber").length > 0
+                              ? "border-red-500 bg-red-900/20"
+                              : "border-slate-600"
+                          }`}
+                          onClick={(e) => e.stopPropagation()}
+                          placeholder="Phone number"
+                        />
+                        <FieldErrorBadge
+                          errors={getFieldErrors(cust, "phoneNumber")}
+                          label={getFieldErrors(cust, "phoneNumber")[0] || ""}
+                        />
+                      </div>
                     ) : (
-                      <span className="text-slate-200">{cust.phoneNumber}</span>
+                      <span
+                        className={`text-slate-200 ${
+                          !cust.phoneNumber?.trim()
+                            ? "text-red-400 font-semibold"
+                            : ""
+                        }`}
+                      >
+                        {cust.phoneNumber || "Missing"}
+                      </span>
                     )}
                   </td>
                   <td className="py-3 px-4">
@@ -160,20 +211,49 @@ export function CustomersTable({ customers, isLoading }: CustomersTableProps) {
 
       {customers.some((cust) => hasErrors(cust)) && (
         <div className="bg-red-950/30 border border-red-800 rounded-lg p-4">
-          <div className="flex gap-2 mb-3">
-            <AlertCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-            <h3 className="text-red-400 font-semibold">Validation Errors</h3>
+          <div className="flex gap-2 mb-4">
+            <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+            <h3 className="text-red-400 font-semibold">
+              Validation Issues Found
+            </h3>
           </div>
-          <div className="space-y-2">
+          <div className="space-y-3 max-h-48 overflow-y-auto">
             {customers.map((cust, idx) => {
               if (!hasErrors(cust)) return null;
               return (
-                <div key={idx} className="text-sm text-red-300">
-                  <strong>{cust.customerName}:</strong>{" "}
-                  {cust.validationErrors?.map((err) => err.message).join(", ")}
+                <div
+                  key={idx}
+                  className="bg-slate-900/50 rounded p-3 border border-red-900/50"
+                >
+                  <div className="flex items-start gap-2 mb-2">
+                    <AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
+                    <strong className="text-red-300 text-sm">
+                      {cust.customerName || "Unknown Customer"}
+                    </strong>
+                  </div>
+                  <div className="space-y-1 ml-6">
+                    {cust.validationErrors?.map((err, errIdx) => (
+                      <div
+                        key={errIdx}
+                        className="text-xs text-red-300 flex items-start gap-2"
+                      >
+                        <span className="text-red-500 font-bold">•</span>
+                        <span>
+                          <span className="font-semibold text-red-200">
+                            {err.field}:
+                          </span>{" "}
+                          {err.message}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               );
             })}
+          </div>
+          <div className="mt-3 text-xs text-red-300 bg-red-900/20 p-2 rounded">
+            Click on a row to edit and fill in missing fields. Fields
+            highlighted in red require attention.
           </div>
         </div>
       )}

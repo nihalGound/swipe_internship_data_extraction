@@ -6,10 +6,8 @@ import { Readable } from "stream";
 import { GoogleGenAI } from "@google/genai";
 import * as XLSX from "xlsx";
 
-// Initialize Gemini AI
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY! });
 
-// Helper function to wait for file processing
 async function waitForProcessing(file: any) {
   let currentFile = file;
   while (currentFile.state === "PROCESSING") {
@@ -19,7 +17,6 @@ async function waitForProcessing(file: any) {
   return currentFile;
 }
 
-// Helper function to create part from URI
 function createPartFromUri(uri: string, mimeType: string) {
   return {
     fileData: {
@@ -43,7 +40,6 @@ async function excelToText(filePath: string): Promise<string> {
   return allText;
 }
 
-// Convert NextRequest to Node.js IncomingMessage for formidable
 async function convertToNodeRequest(request: NextRequest) {
   const arrayBuffer = await request.arrayBuffer();
   const buffer = Buffer.from(arrayBuffer);
@@ -131,15 +127,13 @@ Extract and return **structured JSON** with ALL these fields:
 
 export async function POST(request: NextRequest) {
   try {
-    // Create uploads directory if it doesn't exist
     const uploadDir = path.join(process.cwd(), "public", "uploads");
     await fs.mkdir(uploadDir, { recursive: true });
 
-    // Configure formidable
     const form = formidable({
       uploadDir,
       keepExtensions: true,
-      maxFileSize: 10 * 1024 * 1024, // 10MB
+      maxFileSize: 10 * 1024 * 1024,
       multiples: true,
       filename: (name, ext, part) => {
         const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
@@ -147,13 +141,10 @@ export async function POST(request: NextRequest) {
       },
     });
 
-    // Convert NextRequest to Node.js request
     const nodeRequest = await convertToNodeRequest(request);
 
-    // Parse the form
     const [fields, files] = await form.parse(nodeRequest);
 
-    // Get file array
     const fileArray: formidable.File[] = [];
     for (const [fieldName, fileList] of Object.entries(files)) {
       const filesArr = Array.isArray(fileList) ? fileList : [fileList];
@@ -166,23 +157,18 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "No files uploaded" }, { status: 400 });
     }
 
-    // AI Extraction Logic
     const content: (string | any)[] = [PROMPT];
 
-    // Process each file
     for (const file of fileArray) {
       const mimeType = file.mimetype!;
       const filePath = file.filepath;
 
-      // Handle Excel files - convert to text
       if (mimeType.includes("spreadsheet") || mimeType.includes("excel")) {
         const excelText = await excelToText(filePath);
         content.push(
           `\n\n=== Excel File: ${file.originalFilename} ===\n${excelText}`
         );
-      }
-      // Handle PDF and Images - upload to Gemini
-      else if (mimeType.includes("pdf") || mimeType.includes("image")) {
+      } else if (mimeType.includes("pdf") || mimeType.includes("image")) {
         const buffer = await fs.readFile(filePath);
         const blob = new Blob([buffer], { type: mimeType });
 
@@ -205,7 +191,6 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Generate content with Gemini
     const result = await ai.models.generateContent({
       model: "gemini-2.5-flash",
       contents: content,

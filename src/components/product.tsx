@@ -7,6 +7,7 @@ import { updateProduct, setProductErrors } from "@/redux/productSlice";
 import { updateInvoice } from "@/redux/invoiceSlice";
 import { validateProduct } from "@/lib/validation";
 import { AlertCircle } from "lucide-react";
+import { FieldErrorBadge } from "./field-error";
 
 interface ProductsTableProps {
   products: Product[];
@@ -56,6 +57,14 @@ export function ProductsTable({ products, isLoading }: ProductsTableProps) {
 
   const hasErrors = (product: Product) => {
     return product.validationErrors && product.validationErrors.length > 0;
+  };
+
+  const getFieldErrors = (product: Product, field: string): string[] => {
+    return (
+      product.validationErrors
+        ?.filter((err) => err.field === field)
+        .map((err) => err.message) || []
+    );
   };
 
   if (isLoading) {
@@ -118,56 +127,114 @@ export function ProductsTable({ products, isLoading }: ProductsTableProps) {
                 >
                   <td className="py-3 px-4">
                     {isEditing ? (
-                      <input
-                        value={prod.name}
-                        onChange={(e) =>
-                          handleFieldChange(idx, "name", e.target.value)
-                        }
-                        className="bg-slate-700 text-white px-2 py-1 rounded w-full text-xs"
-                        onClick={(e) => e.stopPropagation()}
-                      />
+                      <div className="space-y-1">
+                        <input
+                          value={prod.name}
+                          onChange={(e) =>
+                            handleFieldChange(idx, "name", e.target.value)
+                          }
+                          className={`bg-slate-700 text-white px-2 py-1 rounded w-full text-xs border ${
+                            getFieldErrors(prod, "name").length > 0
+                              ? "border-red-500 bg-red-900/20"
+                              : "border-slate-600"
+                          }`}
+                          onClick={(e) => e.stopPropagation()}
+                          placeholder="Product name"
+                        />
+                        <FieldErrorBadge
+                          errors={getFieldErrors(prod, "name")}
+                          label={getFieldErrors(prod, "name")[0] || ""}
+                        />
+                      </div>
                     ) : (
-                      <span className="text-slate-200">{prod.name}</span>
+                      <span
+                        className={`text-slate-200 ${
+                          !prod.name?.trim() ? "text-red-400 font-semibold" : ""
+                        }`}
+                      >
+                        {prod.name || "Missing"}
+                      </span>
                     )}
                   </td>
                   <td className="py-3 px-4 text-right">
                     {isEditing ? (
-                      <input
-                        value={prod.unitPrice}
-                        onChange={(e) =>
-                          handleFieldChange(idx, "unitPrice", e.target.value)
-                        }
-                        className="bg-slate-700 text-white px-2 py-1 rounded w-full text-right text-xs"
-                        onClick={(e) => e.stopPropagation()}
-                      />
+                      <div className="space-y-1">
+                        <input
+                          value={prod.unitPrice}
+                          onChange={(e) =>
+                            handleFieldChange(idx, "unitPrice", e.target.value)
+                          }
+                          className={`bg-slate-700 text-white px-2 py-1 rounded w-full text-right text-xs border ${
+                            getFieldErrors(prod, "unitPrice").length > 0
+                              ? "border-red-500 bg-red-900/20"
+                              : "border-slate-600"
+                          }`}
+                          onClick={(e) => e.stopPropagation()}
+                          placeholder="Price"
+                        />
+                        <FieldErrorBadge
+                          errors={getFieldErrors(prod, "unitPrice")}
+                          label={getFieldErrors(prod, "unitPrice")[0] || ""}
+                        />
+                      </div>
                     ) : (
                       <span className="text-slate-200">{prod.unitPrice}</span>
                     )}
                   </td>
                   <td className="py-3 px-4 text-right">
                     {isEditing ? (
-                      <input
-                        value={prod.quantity}
-                        onChange={(e) =>
-                          handleFieldChange(idx, "quantity", e.target.value)
-                        }
-                        className="bg-slate-700 text-white px-2 py-1 rounded w-full text-right text-xs"
-                        onClick={(e) => e.stopPropagation()}
-                      />
+                      <div className="space-y-1">
+                        <input
+                          value={prod.quantity}
+                          onChange={(e) =>
+                            handleFieldChange(idx, "quantity", e.target.value)
+                          }
+                          className={`bg-slate-700 text-white px-2 py-1 rounded w-full text-right text-xs border ${
+                            getFieldErrors(prod, "quantity").length > 0
+                              ? "border-red-500 bg-red-900/20"
+                              : "border-slate-600"
+                          }`}
+                          onClick={(e) => e.stopPropagation()}
+                          placeholder="Qty"
+                        />
+                        <FieldErrorBadge
+                          errors={getFieldErrors(prod, "quantity")}
+                          label={getFieldErrors(prod, "quantity")[0] || ""}
+                        />
+                      </div>
                     ) : (
-                      <span className="text-slate-200">{prod.quantity}</span>
+                      <span
+                        className={`text-slate-200 ${
+                          !prod.quantity?.trim()
+                            ? "text-red-400 font-semibold"
+                            : ""
+                        }`}
+                      >
+                        {prod.quantity || "Missing"}
+                      </span>
                     )}
                   </td>
                   <td className="py-3 px-4 text-right">
                     {isEditing ? (
-                      <input
-                        value={prod.taxPercent}
-                        onChange={(e) =>
-                          handleFieldChange(idx, "taxPercent", e.target.value)
-                        }
-                        className="bg-slate-700 text-white px-2 py-1 rounded w-full text-right text-xs"
-                        onClick={(e) => e.stopPropagation()}
-                      />
+                      <div className="space-y-1">
+                        <input
+                          value={prod.taxPercent}
+                          onChange={(e) =>
+                            handleFieldChange(idx, "taxPercent", e.target.value)
+                          }
+                          className={`bg-slate-700 text-white px-2 py-1 rounded w-full text-right text-xs border ${
+                            getFieldErrors(prod, "taxPercent").length > 0
+                              ? "border-red-500 bg-red-900/20"
+                              : "border-slate-600"
+                          }`}
+                          onClick={(e) => e.stopPropagation()}
+                          placeholder="Tax %"
+                        />
+                        <FieldErrorBadge
+                          errors={getFieldErrors(prod, "taxPercent")}
+                          label={getFieldErrors(prod, "taxPercent")[0] || ""}
+                        />
+                      </div>
                     ) : (
                       <span className="text-slate-200">{prod.taxPercent}</span>
                     )}
@@ -189,20 +256,49 @@ export function ProductsTable({ products, isLoading }: ProductsTableProps) {
 
       {products.some((prod) => hasErrors(prod)) && (
         <div className="bg-red-950/30 border border-red-800 rounded-lg p-4">
-          <div className="flex gap-2 mb-3">
-            <AlertCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-            <h3 className="text-red-400 font-semibold">Validation Errors</h3>
+          <div className="flex gap-2 mb-4">
+            <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+            <h3 className="text-red-400 font-semibold">
+              Validation Issues Found
+            </h3>
           </div>
-          <div className="space-y-2">
+          <div className="space-y-3 max-h-48 overflow-y-auto">
             {products.map((prod, idx) => {
               if (!hasErrors(prod)) return null;
               return (
-                <div key={idx} className="text-sm text-red-300">
-                  <strong>{prod.name}:</strong>{" "}
-                  {prod.validationErrors?.map((err) => err.message).join(", ")}
+                <div
+                  key={idx}
+                  className="bg-slate-900/50 rounded p-3 border border-red-900/50"
+                >
+                  <div className="flex items-start gap-2 mb-2">
+                    <AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
+                    <strong className="text-red-300 text-sm">
+                      {prod.name || "Unknown Product"}
+                    </strong>
+                  </div>
+                  <div className="space-y-1 ml-6">
+                    {prod.validationErrors?.map((err, errIdx) => (
+                      <div
+                        key={errIdx}
+                        className="text-xs text-red-300 flex items-start gap-2"
+                      >
+                        <span className="text-red-500 font-bold">•</span>
+                        <span>
+                          <span className="font-semibold text-red-200">
+                            {err.field}:
+                          </span>{" "}
+                          {err.message}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               );
             })}
+          </div>
+          <div className="mt-3 text-xs text-red-300 bg-red-900/20 p-2 rounded">
+            Click on a row to edit and fill in missing fields. Fields
+            highlighted in red require attention.
           </div>
         </div>
       )}

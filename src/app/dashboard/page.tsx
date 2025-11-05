@@ -36,16 +36,13 @@ export default function DashboardPage() {
 
   return (
     <div className="flex h-screen bg-slate-950 text-slate-50">
-      {/* Sidebar */}
       <Sidebar
         activeTab={activeTab}
         onTabChange={setActiveTab}
         onUploadClick={() => setIsUploadDialogOpen(true)}
       />
 
-      {/* Main Content */}
       <main className="flex-1 flex flex-col overflow-hidden">
-        {/* Header */}
         <header className="border-b border-slate-800 bg-slate-900 px-8 py-6">
           <div className="flex items-center justify-between">
             <div>
@@ -77,7 +74,6 @@ export default function DashboardPage() {
           </div>
         </header>
 
-        {/* Content Area */}
         <div className="flex-1 overflow-auto p-8">
           <div className="max-w-7xl mx-auto">
             {activeTab === "invoices" && (
@@ -102,7 +98,6 @@ export default function DashboardPage() {
         </div>
       </main>
 
-      {/* Upload Dialog */}
       <UploadDialog
         isOpen={isUploadDialogOpen}
         onClose={() => setIsUploadDialogOpen(false)}

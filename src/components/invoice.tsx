@@ -7,6 +7,7 @@ import { updateInvoice, setInvoiceErrors } from "@/redux/invoiceSlice";
 import { updateProduct } from "@/redux/productSlice";
 import { validateInvoice } from "@/lib/validation";
 import { AlertCircle } from "lucide-react";
+import { FieldErrorBadge } from "./field-error";
 
 interface InvoicesTableProps {
   invoices: Invoice[];
@@ -67,6 +68,14 @@ export function InvoicesTable({ invoices, isLoading }: InvoicesTableProps) {
 
   const hasErrors = (invoice: Invoice) => {
     return invoice.validationErrors && invoice.validationErrors.length > 0;
+  };
+
+  const getFieldErrors = (invoice: Invoice, field: string): string[] => {
+    return (
+      invoice.validationErrors
+        ?.filter((err) => err.field === field)
+        .map((err) => err.message) || []
+    );
   };
 
   if (isLoading) {
@@ -139,110 +148,214 @@ export function InvoicesTable({ invoices, isLoading }: InvoicesTableProps) {
                 >
                   <td className="py-3 px-4">
                     {isEditing ? (
-                      <input
-                        value={inv.serialNumber}
-                        onChange={(e) =>
-                          handleFieldChange(
-                            globalIdx,
-                            "serialNumber",
-                            e.target.value
-                          )
-                        }
-                        className="bg-slate-700 text-white px-2 py-1 rounded w-full text-xs"
-                        onClick={(e) => e.stopPropagation()}
-                      />
+                      <div className="space-y-1">
+                        <input
+                          value={inv.serialNumber}
+                          onChange={(e) =>
+                            handleFieldChange(
+                              globalIdx,
+                              "serialNumber",
+                              e.target.value
+                            )
+                          }
+                          className={`bg-slate-700 text-white px-2 py-1 rounded w-full text-xs border ${
+                            getFieldErrors(inv, "serialNumber").length > 0
+                              ? "border-red-500 bg-red-900/20"
+                              : "border-slate-600"
+                          }`}
+                          onClick={(e) => e.stopPropagation()}
+                          placeholder="Serial number"
+                        />
+                        <FieldErrorBadge
+                          errors={getFieldErrors(inv, "serialNumber")}
+                          label={getFieldErrors(inv, "serialNumber")[0] || ""}
+                        />
+                      </div>
                     ) : (
-                      <span className="text-slate-200">{inv.serialNumber}</span>
+                      <span
+                        className={`text-slate-200 ${
+                          !inv.serialNumber?.trim()
+                            ? "text-red-400 font-semibold"
+                            : ""
+                        }`}
+                      >
+                        {inv.serialNumber || "Missing"}
+                      </span>
                     )}
                   </td>
                   <td className="py-3 px-4">
                     {isEditing ? (
-                      <input
-                        value={inv.invoiceDate}
-                        onChange={(e) =>
-                          handleFieldChange(
-                            globalIdx,
-                            "invoiceDate",
-                            e.target.value
-                          )
-                        }
-                        className="bg-slate-700 text-white px-2 py-1 rounded w-full text-xs"
-                        onClick={(e) => e.stopPropagation()}
-                      />
+                      <div className="space-y-1">
+                        <input
+                          value={inv.invoiceDate}
+                          onChange={(e) =>
+                            handleFieldChange(
+                              globalIdx,
+                              "invoiceDate",
+                              e.target.value
+                            )
+                          }
+                          className={`bg-slate-700 text-white px-2 py-1 rounded w-full text-xs border ${
+                            getFieldErrors(inv, "invoiceDate").length > 0
+                              ? "border-red-500 bg-red-900/20"
+                              : "border-slate-600"
+                          }`}
+                          onClick={(e) => e.stopPropagation()}
+                          placeholder="Date"
+                        />
+                        <FieldErrorBadge
+                          errors={getFieldErrors(inv, "invoiceDate")}
+                          label={getFieldErrors(inv, "invoiceDate")[0] || ""}
+                        />
+                      </div>
                     ) : (
-                      <span className="text-slate-200">{inv.invoiceDate}</span>
+                      <span
+                        className={`text-slate-200 ${
+                          !inv.invoiceDate?.trim()
+                            ? "text-red-400 font-semibold"
+                            : ""
+                        }`}
+                      >
+                        {inv.invoiceDate || "Missing"}
+                      </span>
                     )}
                   </td>
                   <td className="py-3 px-4">
                     {isEditing ? (
-                      <input
-                        value={inv.customerName}
-                        onChange={(e) =>
-                          handleFieldChange(
-                            globalIdx,
-                            "customerName",
-                            e.target.value
-                          )
-                        }
-                        className="bg-slate-700 text-white px-2 py-1 rounded w-full text-xs"
-                        onClick={(e) => e.stopPropagation()}
-                      />
+                      <div className="space-y-1">
+                        <input
+                          value={inv.customerName}
+                          onChange={(e) =>
+                            handleFieldChange(
+                              globalIdx,
+                              "customerName",
+                              e.target.value
+                            )
+                          }
+                          className={`bg-slate-700 text-white px-2 py-1 rounded w-full text-xs border ${
+                            getFieldErrors(inv, "customerName").length > 0
+                              ? "border-red-500 bg-red-900/20"
+                              : "border-slate-600"
+                          }`}
+                          onClick={(e) => e.stopPropagation()}
+                          placeholder="Customer name"
+                        />
+                        <FieldErrorBadge
+                          errors={getFieldErrors(inv, "customerName")}
+                          label={getFieldErrors(inv, "customerName")[0] || ""}
+                        />
+                      </div>
                     ) : (
-                      <span className="text-slate-200">{inv.customerName}</span>
+                      <span
+                        className={`text-slate-200 ${
+                          !inv.customerName?.trim()
+                            ? "text-red-400 font-semibold"
+                            : ""
+                        }`}
+                      >
+                        {inv.customerName || "Missing"}
+                      </span>
                     )}
                   </td>
                   <td className="py-3 px-4">
                     {isEditing ? (
-                      <input
-                        value={inv.productName}
-                        onChange={(e) =>
-                          handleFieldChange(
-                            globalIdx,
-                            "productName",
-                            e.target.value
-                          )
-                        }
-                        className="bg-slate-700 text-white px-2 py-1 rounded w-full text-xs"
-                        onClick={(e) => e.stopPropagation()}
-                      />
+                      <div className="space-y-1">
+                        <input
+                          value={inv.productName}
+                          onChange={(e) =>
+                            handleFieldChange(
+                              globalIdx,
+                              "productName",
+                              e.target.value
+                            )
+                          }
+                          className={`bg-slate-700 text-white px-2 py-1 rounded w-full text-xs border ${
+                            getFieldErrors(inv, "productName").length > 0
+                              ? "border-red-500 bg-red-900/20"
+                              : "border-slate-600"
+                          }`}
+                          onClick={(e) => e.stopPropagation()}
+                          placeholder="Product name"
+                        />
+                        <FieldErrorBadge
+                          errors={getFieldErrors(inv, "productName")}
+                          label={getFieldErrors(inv, "productName")[0] || ""}
+                        />
+                      </div>
                     ) : (
-                      <span className="text-slate-200 truncate max-w-xs">
-                        {inv.productName}
+                      <span
+                        className={`text-slate-200 truncate max-w-xs ${
+                          !inv.productName?.trim()
+                            ? "text-red-400 font-semibold"
+                            : ""
+                        }`}
+                      >
+                        {inv.productName || "Missing"}
                       </span>
                     )}
                   </td>
                   <td className="py-3 px-4 text-right">
                     {isEditing ? (
-                      <input
-                        value={inv.quantity}
-                        onChange={(e) =>
-                          handleFieldChange(
-                            globalIdx,
-                            "quantity",
-                            e.target.value
-                          )
-                        }
-                        className="bg-slate-700 text-white px-2 py-1 rounded w-full text-right text-xs"
-                        onClick={(e) => e.stopPropagation()}
-                      />
+                      <div className="space-y-1">
+                        <input
+                          value={inv.quantity}
+                          onChange={(e) =>
+                            handleFieldChange(
+                              globalIdx,
+                              "quantity",
+                              e.target.value
+                            )
+                          }
+                          className={`bg-slate-700 text-white px-2 py-1 rounded w-full text-right text-xs border ${
+                            getFieldErrors(inv, "quantity").length > 0
+                              ? "border-red-500 bg-red-900/20"
+                              : "border-slate-600"
+                          }`}
+                          onClick={(e) => e.stopPropagation()}
+                          placeholder="Qty"
+                        />
+                        <FieldErrorBadge
+                          errors={getFieldErrors(inv, "quantity")}
+                          label={getFieldErrors(inv, "quantity")[0] || ""}
+                        />
+                      </div>
                     ) : (
-                      <span className="text-slate-200">{inv.quantity}</span>
+                      <span
+                        className={`text-slate-200 ${
+                          !inv.quantity?.trim()
+                            ? "text-red-400 font-semibold"
+                            : ""
+                        }`}
+                      >
+                        {inv.quantity || "Missing"}
+                      </span>
                     )}
                   </td>
                   <td className="py-3 px-4 text-right">
                     {isEditing ? (
-                      <input
-                        value={inv.taxPercent}
-                        onChange={(e) =>
-                          handleFieldChange(
-                            globalIdx,
-                            "taxPercent",
-                            e.target.value
-                          )
-                        }
-                        className="bg-slate-700 text-white px-2 py-1 rounded w-full text-right text-xs"
-                        onClick={(e) => e.stopPropagation()}
-                      />
+                      <div className="space-y-1">
+                        <input
+                          value={inv.taxPercent}
+                          onChange={(e) =>
+                            handleFieldChange(
+                              globalIdx,
+                              "taxPercent",
+                              e.target.value
+                            )
+                          }
+                          className={`bg-slate-700 text-white px-2 py-1 rounded w-full text-right text-xs border ${
+                            getFieldErrors(inv, "taxPercent").length > 0
+                              ? "border-red-500 bg-red-900/20"
+                              : "border-slate-600"
+                          }`}
+                          onClick={(e) => e.stopPropagation()}
+                          placeholder="Tax %"
+                        />
+                        <FieldErrorBadge
+                          errors={getFieldErrors(inv, "taxPercent")}
+                          label={getFieldErrors(inv, "taxPercent")[0] || ""}
+                        />
+                      </div>
                     ) : (
                       <span className="text-slate-200">{inv.taxPercent}</span>
                     )}
@@ -267,20 +380,49 @@ export function InvoicesTable({ invoices, isLoading }: InvoicesTableProps) {
 
       {invoices.some((inv) => hasErrors(inv)) && (
         <div className="bg-red-950/30 border border-red-800 rounded-lg p-4">
-          <div className="flex gap-2 mb-3">
-            <AlertCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-            <h3 className="text-red-400 font-semibold">Validation Errors</h3>
+          <div className="flex gap-2 mb-4">
+            <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+            <h3 className="text-red-400 font-semibold">
+              Validation Issues Found
+            </h3>
           </div>
-          <div className="space-y-2">
+          <div className="space-y-3 max-h-48 overflow-y-auto">
             {invoices.map((inv, idx) => {
               if (!hasErrors(inv)) return null;
               return (
-                <div key={idx} className="text-sm text-red-300">
-                  <strong>Row {idx + 1}:</strong>{" "}
-                  {inv.validationErrors?.map((err) => err.message).join(", ")}
+                <div
+                  key={idx}
+                  className="bg-slate-900/50 rounded p-3 border border-red-900/50"
+                >
+                  <div className="flex items-start gap-2 mb-2">
+                    <AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
+                    <strong className="text-red-300 text-sm">
+                      Row {idx + 1}: {inv.serialNumber || "Unknown"}
+                    </strong>
+                  </div>
+                  <div className="space-y-1 ml-6">
+                    {inv.validationErrors?.map((err, errIdx) => (
+                      <div
+                        key={errIdx}
+                        className="text-xs text-red-300 flex items-start gap-2"
+                      >
+                        <span className="text-red-500 font-bold">•</span>
+                        <span>
+                          <span className="font-semibold text-red-200">
+                            {err.field}:
+                          </span>{" "}
+                          {err.message}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               );
             })}
+          </div>
+          <div className="mt-3 text-xs text-red-300 bg-red-900/20 p-2 rounded">
+            Click on a row to edit and fill in missing fields. Fields
+            highlighted in red require attention.
           </div>
         </div>
       )}
