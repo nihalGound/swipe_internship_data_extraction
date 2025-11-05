@@ -41,6 +41,7 @@ export const uploadFiles = async (
     }
 
     const data = await response.json();
+    console.log(data);
 
     if (!data.invoices && !data.products && !data.customers) {
       throw new Error("No data could be extracted from the uploaded files");

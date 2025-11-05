@@ -149,7 +149,7 @@ export function ProductsTable({ products, isLoading }: ProductsTableProps) {
                     ) : (
                       <span
                         className={`text-slate-200 ${
-                          !prod.name?.trim() ? "text-red-400 font-semibold" : ""
+                          !prod.name ? "text-red-400 font-semibold" : ""
                         }`}
                       >
                         {prod.name || "Missing"}
@@ -205,9 +205,7 @@ export function ProductsTable({ products, isLoading }: ProductsTableProps) {
                     ) : (
                       <span
                         className={`text-slate-200 ${
-                          !prod.quantity?.trim()
-                            ? "text-red-400 font-semibold"
-                            : ""
+                          !prod.quantity ? "text-red-400 font-semibold" : ""
                         }`}
                       >
                         {prod.quantity || "Missing"}

@@ -162,9 +162,7 @@ export function InvoicesTable({ invoices, isLoading }: InvoicesTableProps) {
                     ) : (
                       <span
                         className={`text-slate-200 ${
-                          !inv.serialNumber?.trim()
-                            ? "text-red-400 font-semibold"
-                            : ""
+                          !inv.serialNumber ? "text-red-400 font-semibold" : ""
                         }`}
                       >
                         {inv.serialNumber || "Missing"}
@@ -199,9 +197,7 @@ export function InvoicesTable({ invoices, isLoading }: InvoicesTableProps) {
                     ) : (
                       <span
                         className={`text-slate-200 ${
-                          !inv.invoiceDate?.trim()
-                            ? "text-red-400 font-semibold"
-                            : ""
+                          !inv.invoiceDate ? "text-red-400 font-semibold" : ""
                         }`}
                       >
                         {inv.invoiceDate || "Missing"}
@@ -236,9 +232,7 @@ export function InvoicesTable({ invoices, isLoading }: InvoicesTableProps) {
                     ) : (
                       <span
                         className={`text-slate-200 ${
-                          !inv.customerName?.trim()
-                            ? "text-red-400 font-semibold"
-                            : ""
+                          !inv.customerName ? "text-red-400 font-semibold" : ""
                         }`}
                       >
                         {inv.customerName || "Missing"}
@@ -273,9 +267,7 @@ export function InvoicesTable({ invoices, isLoading }: InvoicesTableProps) {
                     ) : (
                       <span
                         className={`text-slate-200 truncate max-w-xs ${
-                          !inv.productName?.trim()
-                            ? "text-red-400 font-semibold"
-                            : ""
+                          !inv.productName ? "text-red-400 font-semibold" : ""
                         }`}
                       >
                         {inv.productName || "Missing"}
@@ -310,9 +302,7 @@ export function InvoicesTable({ invoices, isLoading }: InvoicesTableProps) {
                     ) : (
                       <span
                         className={`text-slate-200 ${
-                          !inv.quantity?.trim()
-                            ? "text-red-400 font-semibold"
-                            : ""
+                          !inv.quantity ? "text-red-400 font-semibold" : ""
                         }`}
                       >
                         {inv.quantity || "Missing"}
