@@ -30,12 +30,10 @@ export function InvoicesTable({ invoices, isLoading }: InvoicesTableProps) {
     (invoiceIndex: number, field: string, value: string) => {
       const invoice = { ...invoices[invoiceIndex], [field]: value };
 
-      // Validate the updated invoice
       const errors = validateInvoice(invoice);
       dispatch(setInvoiceErrors({ index: invoiceIndex, errors }));
       dispatch(updateInvoice({ index: invoiceIndex, invoice }));
 
-      // If product name changed, sync to products tab
       if (field === "productName") {
         const productIndex = products.findIndex((p) => p.name === value);
         if (productIndex !== -1) {
@@ -55,16 +53,6 @@ export function InvoicesTable({ invoices, isLoading }: InvoicesTableProps) {
     },
     [invoices, dispatch, products]
   );
-
-  const getMissingFields = (invoice: Invoice): string[] => {
-    const missing = [];
-    if (!invoice.serialNumber?.trim()) missing.push("Serial #");
-    if (!invoice.invoiceDate?.trim()) missing.push("Date");
-    if (!invoice.customerName?.trim()) missing.push("Customer");
-    if (!invoice.productName?.trim()) missing.push("Product");
-    if (!invoice.quantity?.trim()) missing.push("Quantity");
-    return missing;
-  };
 
   const hasErrors = (invoice: Invoice) => {
     return invoice.validationErrors && invoice.validationErrors.length > 0;

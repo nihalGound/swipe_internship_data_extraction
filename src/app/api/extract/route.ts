@@ -127,7 +127,7 @@ Extract and return **structured JSON** with ALL these fields:
 
 export async function POST(request: NextRequest) {
   try {
-    const uploadDir = path.join(process.cwd(), "public", "uploads");
+    const uploadDir = path.join("/tmp", "uploads");
     await fs.mkdir(uploadDir, { recursive: true });
 
     const form = formidable({
@@ -188,6 +188,7 @@ export async function POST(request: NextRequest) {
           );
           content.push(fileContent);
         }
+        await fs.unlink(filePath);
       }
     }
 
